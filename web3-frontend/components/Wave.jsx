@@ -9,7 +9,7 @@ export default function Wave() {
   /**
    * Create a variable here that holds the contract address after you deploy!
    */
-  const contractAddress = "0x4e585e879986eAab46008E513EBcCE6300E686f8";
+  const contractAddress = "0x3F09743F1640e9E104ECd79623194B710ed2De9B";
 
   const contractABI = abi.abi;
 
