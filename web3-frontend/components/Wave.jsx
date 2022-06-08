@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import abi from "../utils/WavePortal.json";
+import { Button } from "react-bootstrap";
 
 export default function Wave() {
   const [currentAccount, setCurrentAccount] = useState("");
@@ -112,16 +113,18 @@ export default function Wave() {
     <>
       <div className="mainContainer">
         <div className="dataContainer">
-          <button className="waveButton" onClick={wave}>
+          <Button variant="warning" className="waveButton" onClick={wave}>
             Wave at Me
-          </button>
-
+          </Button>
           {!currentAccount && (
-            <button className="waveButton" onClick={connectWallet}>
+            <Button
+              variant="success"
+              className="waveButton"
+              onClick={connectWallet}
+            >
               Connect Wallet
-            </button>
+            </Button>
           )}
-          <p>Your wallet address:{contractAddress}</p>
         </div>
       </div>
     </>
